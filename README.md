@@ -1,49 +1,54 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+## Secure RBAC-Based Real-Time Collaborative Text Editor with Nest.js and Gatsby Using Permit.io
 
-## 🚀 Quick start
+A tutorial to showcase REBAC and role derivation through a realtime collaborative text editor built in Gatsby, Nest.js and Gatsby Using Permit.io
 
-1.  **Create a Gatsby site.**
+[View Tutorial]()
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## Getting Started
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+#### Clone The Repository
 
-2.  **Start developing.**
+```sh
+$ https://github.com/muyiwexy/collab_text_editor_frontend.git
+```
 
-    Navigate into your new site’s directory and start it up.
+#### Change directory
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+```sh
+$ cd collab_text_editor_frontend
+```
 
-3.  **Open the code and start customizing!**
+#### Install dependencies
 
-    Your site is now running at http://localhost:8000!
+```sh
+$ npm install
+```
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+#### Setup Env variables
 
-4.  **Learn more**
+- Create a `.env.development` file in your root directory and add the following to it:
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+```
+PUBLIC_LIVE_BLOCKS_PUBLIC_API_KEY:'LiveBlocks public key'
+PUBLIC_LIVE_BLOCKS_SECRET_KEY:'LiveBlocks secret key'
+PUBLIC_APPWRITE_ENDPOINT:'Appwrite endpoint'
+PUBLIC_APPWRITE_PROJECT_ID:'Appwrite project id'
+APPWRITE_DATABASE_ID:'Appwrite database id'
+APPWRITE_DOCUMENT_COLLECTION_ID:'Appwrite document collection id'
+APPWRITE_FOLDER_COLLECTION_ID:'Appwrite folder collection id'
+```
 
-## 🚀 Quick start (Netlify)
+#### Start the app
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+- Open the app in terminals and run `gatsby develop`.
+- Open http://localhost:8000/ in your browser to see the app
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+## Prerequisites
+
+A basic knowledge of React
+
+## Built With
+
+- [LIVEBLOCKS](https://liveblocks.io/) - provides customizable pre-built features that boost user engagement by adding collaboration to your product
+- [Gatsby](https://www.gatsbyjs.org/) - A static site generator for React
+- [Appwrite](https://appwrite.io/) -open spurce Backend as a service
