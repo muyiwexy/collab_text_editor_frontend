@@ -10,6 +10,6 @@ export interface Document extends Models.Document {
 }
 export interface Folder extends Models.Document {
   title: string;
-  documentCollection: Document[];
+  document: Document[];
   created_by: string[];
 }

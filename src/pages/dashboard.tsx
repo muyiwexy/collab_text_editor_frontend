@@ -38,7 +38,7 @@ export default function Dashboard() {
   // Get all document IDs that are in folders
   const getDocumentsInFolders = (folders: Folder[]): string[] => {
     return folders.flatMap(
-      (folder) => folder.documentCollection?.map((doc) => doc.$id) ?? []
+      (folder) => folder.document?.map((doc) => doc.$id) ?? []
     );
   };
 
@@ -117,7 +117,7 @@ export default function Dashboard() {
         {
           title: newFolderTitle.trim(),
           created_by: [user?.$id ?? ""],
-          documentCollection: [], // Initialize with empty collection
+          document: [], // Initialize with empty collection
         }
       );
 
@@ -232,7 +232,7 @@ export default function Dashboard() {
                     {folder.title}
                   </CardTitle>
                   <CardDescription>
-                    {folder.documentCollection.length} documents
+                    {folder.document.length} documents
                   </CardDescription>
                 </CardHeader>
                 <CardFooter>

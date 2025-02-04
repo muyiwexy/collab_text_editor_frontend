@@ -47,7 +47,7 @@ export default function DocumentPage({ params }: { params: { id: string } }) {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             permissions: ["read", "update", "delete"],
-            resource_instance: `document:${params.id}`,
+            resource_instance: `Document:${params.id}`,
             user: user?.email ?? "",
           }),
         }

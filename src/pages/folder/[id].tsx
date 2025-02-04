@@ -39,7 +39,7 @@ export default function FolderPage({ params }: { params: { id: string } }) {
   };
 
   const filteredDocuments =
-    folder?.documentCollection.filter((doc) =>
+    folder?.document.filter((doc) =>
       doc.title.toLowerCase().includes(searchTerm.toLowerCase())
     ) ?? [];
 
@@ -120,7 +120,7 @@ export default function FolderPage({ params }: { params: { id: string } }) {
           />
         </div>
       </div>
-      {folder.documentCollection.length === 0 && (
+      {folder.document.length === 0 && (
         <p className="text-center text-gray-500">
           You don&apos;t have any folders or documents yet. Click on the New
           Folder or New Document button to create one.

@@ -35,7 +35,7 @@ export function createDocumentFunction(
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             key: documentId,
-            resource: "document",
+            resource: "Document",
           }),
         }
       );
@@ -48,8 +48,8 @@ export function createDocumentFunction(
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            resource_instance: `document:${createdData.result.key}`,
-            role: "owner",
+            resource_instance: `Document:${createdData.result.key}`,
+            role: "Owner",
             user: user?.email ?? "",
           }),
         }

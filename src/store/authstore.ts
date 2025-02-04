@@ -52,12 +52,6 @@ export const useAuthStore = create<AuthState>()(
 
           await account.create(ID.unique(), email, password, name);
 
-          await account.createEmailPasswordSession(email, password);
-
-          const session = await account.getSession("current");
-
-          const user = await account.get();
-
           fetch("http://localhost:3000/permissions/sync", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -66,7 +60,13 @@ export const useAuthStore = create<AuthState>()(
               email: email,
             }),
           }),
-            set({ user, isLoading: false, session });
+            await account.createEmailPasswordSession(email, password);
+
+          const session = await account.getSession("current");
+
+          const user = await account.get();
+
+          set({ user, isLoading: false, session });
         } catch (error) {
           set({ error: (error as Error).message, isLoading: false });
 

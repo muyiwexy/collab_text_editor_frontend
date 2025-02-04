@@ -30,7 +30,7 @@ interface ShareDocumentProps {
 
 export function ShareDocument({ documentId, permission }: ShareDocumentProps) {
   const [email, setEmail] = useState("");
-  const [role, setRole] = useState("viewer");
+  const [role, setRole] = useState("Viewer");
   const [isOpen, setIsOpen] = useState(false);
   const [isSharing, setIsSharing] = useState(false);
 
@@ -52,7 +52,7 @@ export function ShareDocument({ documentId, permission }: ShareDocumentProps) {
         body: JSON.stringify({
           user: email,
           role,
-          resource_instance: `document:${documentId}`,
+          resource_instance: `Document:${documentId}`,
         }),
       });
       await navigator.clipboard.writeText(window.location.href);
@@ -62,7 +62,7 @@ export function ShareDocument({ documentId, permission }: ShareDocumentProps) {
       });
       setIsOpen(false);
       setEmail("");
-      setRole("viewer");
+      setRole("Viewer");
     } catch (error) {
       console.error(error);
       toast({
@@ -118,9 +118,9 @@ export function ShareDocument({ documentId, permission }: ShareDocumentProps) {
                 <SelectValue placeholder="Select a role" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="viewer">Viewer</SelectItem>
-                <SelectItem value="editor">Editor</SelectItem>
-                <SelectItem value="owner">Owner</SelectItem>
+                <SelectItem value="Viewer">Viewer</SelectItem>
+                <SelectItem value="Editor">Editor</SelectItem>
+                <SelectItem value="Owner">Owner</SelectItem>
               </SelectContent>
             </Select>
           </div>
