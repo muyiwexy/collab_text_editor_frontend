@@ -29,7 +29,6 @@ $ npm install
 - Create a `.env.development` file in your root directory and add the following to it:
 
 ```
-PUBLIC_LIVE_BLOCKS_PUBLIC_API_KEY:'LiveBlocks public key'
 PUBLIC_LIVE_BLOCKS_SECRET_KEY:'LiveBlocks secret key'
 PUBLIC_APPWRITE_ENDPOINT:'Appwrite endpoint'
 PUBLIC_APPWRITE_PROJECT_ID:'Appwrite project id'
